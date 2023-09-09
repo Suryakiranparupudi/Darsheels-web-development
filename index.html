@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <nav>
+        <div class="name">
+            Surya kiran Parupudi
+        </div>
+        <div class="menu">
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/">About</a></li>
+                <li><a href="/">Certificates</a></li>
+                <li><a href="/">Portfolio</a></li>
+            </ul>
+        </div>
+    </nav>
+    <main>
+        <div class="left">
+            <div class="left-name">
+                Hi, My name is <span>Surya</span>
+            </div>
+            <div class="type">
+                and I am a passionate
+            </div>
+            <span id="element"></span>
+            <div>
+                <button class="button">Download Resume</button>
+            </div>
+        </div>
+        <div class="right">
+            <img src="developer.jpg" alt="developer">
+        </div>
+    </main>
+    <button class="about">
+        <h3>About me</h3>
+    </button>
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+    <!-- Setup and start animation! -->
+    <script>
+        var typed = new Typed('#element', {
+            strings: ['Web Developer'],
+            typeSpeed: 50,
+        });
+    </script>
+</body>
+
+
+</html>
