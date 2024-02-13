@@ -1,0 +1,62 @@
+/* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    width:100%;
+}
+
+.hero {
+    background-color: #f4f4f4;
+    padding: 50px 0;
+    text-align: center;
+}
+
+.about-founder {
+    padding: 50px 0;
+    text-align: center;
+}
+.about-founder #founder{
+    width: 100vw;
+    height: auto;
+}
+.why-choose-us {
+    padding: 50px 0;
+    text-align: center;
+    width:100vw;
+}
+
+.icon-container {
+    justify-content: space-around;
+    width: 100vw;
+    height: auto;
+    display: flex;;
+}
+
+.icon {
+    flex-direction: column;
+    align-items: center;
+}
+#innovation{
+    width: 30vw;
+    height:50vh;
+}
+#creativity{
+    width: 30vw;
+    height:50vh;
+}
+#expertise{
+    width: 30vw;
+    height:50vh;
+}
+.countdown-timer {
+    padding: 50px 0;
+    text-align: center;
+}
+
+.cta {
+    padding: 50px;
+}
+.slide-in-form{
+    height:auto;
+}
