@@ -1,67 +1,140 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-    <title>Darsheel's Web Development Services</title>
+    <title>Your Website Title</title>
+    <link href="https://fonts.cdnfonts.com/css/general-sans" rel="stylesheet">
+    <link href="./styles.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
 </head>
+
 <body>
+
     <!-- Hero Section -->
-    <section class="hero">
-        <h1>Innovate Your Business with Darsheel's Web Development Services</h1>
+    <section class="hero-section">
+        <div class="hero-content">
+            <h1>Unleash Innovation and Creativity with Darsheel</h1>
+            <h2>Your gateway to groundbreaking solutions</h2>
+        </div>
     </section>
 
-    <!-- About Founder Section -->
-    <section class="about-founder">
-        <h2>About Our Visionary Founder</h2>
-        <img src="founder.jpg" alt="Founder" id="founder">
-        <p>Darsheel is a highly skilled web developer with a passion for innovation and creativity. He has a proven track record of delivering high-quality web development services to businesses of all sizes. With his expertise, Darsheel is committed to helping businesses thrive in the digital age.</p>
+    <div class="founder-Div">
+        <!-- About Founder Section -->
+        <section class="founder-section">
+            <h2>Meet Our Visionary Founder</h2>
+            <div class="founder-content">
+                <img src="avatar.jpg" alt="Founder Image">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla gravida diam eget congue cursus.</p>
+            </div>
+        </section>
+
+        <!-- "Why should You go ahead with Me?" Section -->
+        <section class="why-choose-section">
+            <h2>Why Choose Darsheel's Services?</h2>
+            <div class="reasons">
+                <div class="reason">
+                    <i class="fas fa-lightbulb"></i>
+                    <p>Innovative Solutions</p>
+                </div>
+                <div class="reason">
+                    <i class="fas fa-paint-brush"></i>
+                    <p>Creative Approach</p>
+                </div>
+                <div class="reason">
+                    <i class="fas fa-chart-line"></i>
+                    <p>Proven Track Record</p>
+                </div>
+        </section>
+    </div>
+    <!-- Countdown Timer Section -->
+    <section class="countdown-section">
+        <div class="timerDiv">
+            <h1>Limited Time Offer!</h1>
+            <div id="countdown">00:00:00</div>
+        </div>
     </section>
 
-    <!-- Why Choose Us Section -->
-    <section class="why-choose-us">
-        <h2>Why Should You Choose Us?</h2>
-        <div class="icon-container">
-            <div class="icon">
-                <img src="innovation.png" alt="Innovation"  id="innovation">
-                <h3>Innovation</h3>
+    <!-- Call to Action Section -->
+    <section class="cta-section">
+        <div class="cta-sectionDiv">
+            <div>
+                <h2>Ready to Elevate Your Business?</h2>
+                <p>Sign up now for exclusive benefits!</p>
             </div>
-            <div class="icon">
-                <img src="creativity.png" alt="Creativity"  id="creativity">
-                <h3>Creativity</h3>
-            </div>
-            <div class="icon">
-                <img src="expertise.png" alt="Expertise" id="expertise">
-                <h3>Expertise</h3>
+            <div class="cta-buttonDiv">
+                <h1>₹999</h1>
+                <button onclick="handleClick()">Get Started</button>
             </div>
         </div>
     </section>
 
-    <!-- Countdown Timer Section -->
-    <section class="countdown-timer">
-        <h2>Sign Up Now!</h2>
-        <p>We're offering a limited time discount. Hurry up and sign up before it's too late!</p>
-        <div id="countdown"></div>
+    <section class="slide-up-form" id="slideUpForm">
+        <h2 id="Subscribe">Subscribe for Updates</h2>
+        <div id="form">
+            <form>
+                <label for="email">Email: </label>
+                <input type="email" id="email" name="email" required>
+                <br>
+                <br>
+                <label for="phone">Phone: </label>
+                <input type="tel" id="phone" name="phone" required>
+                <br>
+                <br>
+                <button type="submit">   Subscribe</button>
+            </form>
+        </div>
     </section>
 
-    <!-- Call to Action Section -->
-    <section class="cta">
-        <h2>Ready to Boost Your Business?</h2>
-        <p>Sign up now and start benefiting from Darsheel's web development services.</p>
-        <button id="cta-btn">Sign Up</button>
-    </section>
+    <script>
+        const countdownTimeInSeconds = 600; // 10 minutes
 
-    <!-- Slide-in Form -->
-    <form id="slide-in-form" class="slide-in-form">
-        <h2>Sign Up for Our Services</h2>
-        <label for="phone">Phone Number:</label>
-        <input type="tel" id="phone" name="phone" required>
-        <label for="email">Email Address:</label>
-        <input type="email" id="email" name="email" required>
-        <button type="submit">Sign Up</button>
-    </form>
+        let timeRemaining = countdownTimeInSeconds;
 
-    <script src="scripts.js"></script>
+        // Function to update the timer display
+        function updateTimerDisplay() {
+            const hours = Math.floor(timeRemaining / 3600);
+            const minutes = Math.floor((timeRemaining % 3600) / 60);
+            const seconds = timeRemaining % 60;
+
+            // Add leading zeros to single-digit hours, minutes, and seconds
+            const formattedHours = hours.toString().padStart(2, '0');
+            const formattedMinutes = minutes.toString().padStart(2, '0');
+            const formattedSeconds = seconds.toString().padStart(2, '0');
+
+            document.getElementById('countdown').innerText = `${formattedHours}:${formattedMinutes}:${formattedSeconds}`;
+        }
+
+        // Function to update the timer every second
+        function updateTimer() {
+            if (timeRemaining > 0) {
+                timeRemaining--;
+                updateTimerDisplay();
+            } else {
+                clearInterval(timerInterval);
+                document.getElementById('countdown').innerText = "EXPIRED";
+            }
+        }
+        function handleClick() {
+            alert('Registered')
+        }
+        // Start the timer interval
+        const timerInterval = setInterval(updateTimer, 1000);
+        function slideUpDiv() {
+            const slideUpDiv = document.getElementById('slideUpForm');
+            slideUpDiv.style.bottom = '0';
+        }
+
+        // Wait for 15 seconds and then slide up the div
+        setTimeout(slideUpDiv, 15000);
+        // Initial display
+        updateTimerDisplay();
+
+        
+    </script>
+
 </body>
+
 </html>
