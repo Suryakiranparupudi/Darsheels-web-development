@@ -1,111 +1,137 @@
 body {
     font-family: 'General Sans', sans-serif;
-    margin:0;
+    margin: 0;
     padding: 1em;
-    width:100%;
-    background:linear-gradient(to left top,rgb(56, 121, 178),rgb(2, 2, 82));
+    width: 100%;
+    background: linear-gradient(to left top, rgb(43, 88, 127), rgb(2, 2, 82));
     overflow-x: hidden;
     overflow-y: scroll;
     min-height: 100vh;
 }
+
 .hero {
     background-color: #f4f4f4;
     padding: 30px 0;
     text-align: center;
     margin-top: 0;
+
 }
-.hero-content h1{
+
+.hero-content h1 {
     font-size: 3em;
-    text-shadow: 2px 2px 2px rgba(0,0,0,0.3);
-    margin-bottom: 0;   
-    color:	#4e9461;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
+    margin-bottom: 0;
+    color: #FADA5E;
+    margin-top: 10px;
+
 }
-.hero-content h2{
+
+.hero-content h2 {
     border-bottom: 1px solid white;
     padding-bottom: 10px;
-    color: #4e9461;
+    color: #FADA5E;
 }
-.founder-content{
+
+.founder-content {
     display: flex;
     align-items: center;
-    justify-content:center;
+    justify-content: center;
 }
-.founder-Div{
-    color: whitesmoke;
+
+.founder-Div {
+    color: #46ae62b3;
 }
-.founder-content img{
+
+.founder-content img {
     border-radius: 50%;
     height: 100px;
     width: 100px;
     margin-right: 20px;
 }
+
 .about-founder {
     padding: 50px 0;
     text-align: center;
 }
-.about-founder #founder{
+.founder-content p{
+    width: 40vw;
+}
+.about-founder #founder {
     width: 100vw;
     height: auto;
 }
+
 .why-choose-us {
     padding: 50px 0;
     text-align: center;
-    width:100vw;
+    width: 100vw;
 }
-.founder-Div{
+
+.founder-Div {
     display: flex;
     justify-content: space-around;
 }
+
 .icon-container {
     justify-content: space-around;
     width: 100vw;
     height: auto;
-    display: flex;;
+    display: flex;
+    ;
 }
-.reason i{
-    color:#ffff;
+
+.reason i {
+    color: #ffff;
 }
+
 .icon {
     flex-direction: column;
     align-items: center;
 }
-.countdown-section{
+
+.countdown-section {
     width: 100%;
     display: flex;
     align-items: center;
-    justify-content:center ;
+    justify-content: center;
 }
-.timerDiv{
-    border:1px solid black;
-    padding:10px 100px;
+
+.timerDiv {
+    border: 1px solid black;
+    padding: 10px 100px;
     margin: 50px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: 	#FADA5E;
-    color:#000000;
+    background-color: #FADA5E;
+    color: #000000;
     border-radius: 5px;
     border-color: #000000 1px solid;
 }
-.timerDiv h1,.timerDiv #countdown{
-    color:#000000;
+
+.timerDiv h1,
+.timerDiv #countdown {
+    color: #000000;
     font-size: 2em;
     font-weight: 800;
 }
 
-#innovation{
+#innovation {
     width: 30vw;
-    height:50vh;
+    height: 50vh;
 }
-#creativity{
+
+#creativity {
     width: 30vw;
-    height:50vh;
+    height: 50vh;
 }
-#expertise{
+
+#expertise {
     width: 30vw;
-    height:50vh;
+    height: 50vh;
 }
+
 .countdown-timer {
     padding: 50px 0;
     text-align: center;
@@ -114,15 +140,16 @@ body {
 .cta {
     padding: 50px;
 }
-section .slide-up-form{
+
+section .slide-up-form {
     bottom: 500px;
     left: 50%;
     transform: translateX(-50%);
     background-color: #f0f0f0;
-    transition: bottom 0.5s ease-in-out;    
+    transition: bottom 0.5s ease-in-out;
 }
 
-.slide-up-form{
+.slide-up-form {
     margin-top: 20px;
     padding-top: 10px;
     position: relative;
@@ -132,25 +159,30 @@ section .slide-up-form{
     border-radius: 20px;
     width: 25vw;
     height: 30vh;
+    transition: width, height;
+    transition-delay: .4s;
 }
-.cta-section{
+
+.cta-section {
     display: flex;
     align-items: center;
     justify-content: center;
-    width:100%;
+    width: 100%;
 }
-.cta-sectionDiv{
+
+.cta-sectionDiv {
     padding: 20px;
     width: 50%;
     border-radius: 5px;
     background-color: #000a2d;
     border: 1px solid #ffffff;
     display: flex;
-    align-items:center;
+    align-items: center;
     justify-content: space-around;
 }
-.cta-buttonDiv button{
-    background-color: 	#FADA5E;
+
+.cta-buttonDiv button {
+    background-color: #FADA5E;
     border: none;
     outline: none;
     height: 50px;
@@ -163,12 +195,28 @@ section .slide-up-form{
     align-items: center;
     justify-content: center;
 }
-.cta-buttonDiv h1{
-   color:#FADA5E;
-   text-align: center;
-   font-size: 3em;
+
+.cta-buttonDiv h1 {
+    color: #FADA5E;
+    text-align: center;
+    font-size: 3em;
 
 }
-.cta-sectionDiv{
+
+.cta-sectionDiv {
     color: #ccf58a;
+}
+
+.slide-up-form:hover {
+    width: 27vw;
+    height: 37vh;
+    transition: ease-in-out all .4s;
+    border: 2px solid #FADA5E;
+}
+#submit{
+    border-radius: 5px;
+    padding: 3px;
+}
+#submit:hover{
+    cursor: pointer;
 }
